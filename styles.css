@@ -1,0 +1,129 @@
+:root {
+	--dark: #252628;
+	--lightorange: #f68f1e;
+	--darkorange: #f05b28;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--dark);
+	display: flex;
+	justify-content: center;	
+	height: 100vh;
+	align-items: center;
+}
+
+.wrapper {
+	display: flex;
+	position: relative;
+	transform: scale(0.8); /* to make it mobile responsive */
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.outer-circle {
+	width: 196px;
+	height: 192px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--lightorange);
+}
+
+.inner-circle {
+	width: 130px;
+	height: 126px;
+	background-color: var(--dark);
+}
+
+.bridge {
+	width: 33px;
+	height: 111px;
+	background-color: var(--darkorange);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(34.4deg);
+	box-shadow: 50px 0 0 0 var(--dark),
+							33px 0 0 0 var(--dark),
+							-50px 0 0 0 var(--dark),
+							-33px 0 0 0 var(--dark);
+}
+
+.circle-left {
+	background-image: linear-gradient(to left, var(--darkorange) 25%, var(--lightorange));
+}
+
+.circle-right {
+	background-image: linear-gradient(to right, var(--darkorange) 20%, var(--lightorange) 66%);
+}
+
+.rounder {
+	position: absolute;
+	width: 33px;
+	height: 33px;
+	z-index: 1;
+}
+
+.rounder-right {
+	border-bottom-right-radius: 50%;
+	border-top-right-radius: 50%;
+}
+
+.rounder-left {
+	border-bottom-left-radius: 50%;
+	border-top-left-radius: 50%;
+}
+
+.rounder-c-top {
+	left: 140px;
+	bottom: 135px;
+	background-color: var(--darkorange);
+	transform: rotate(39deg);
+}
+
+.rounder-g-bottom {
+	left: 220px;
+	bottom: 23px;
+	background-image: linear-gradient(to top, #f15f2a, #f26a26);
+	transform: rotate(39deg);
+}
+
+.g-line {
+	position: relative;
+	height: 33px;
+	width: 90px;
+	top: 48px;
+	left:73px;
+	background-image: linear-gradient(to right, #f26a2d, var(--lightorange) 70%);
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 25px;
+	box-shadow: 0 -26px 0 8px var(--dark);
+}
+
+.rounder-g-line {
+	left: -25px;
+	background-image: linear-gradient(to right, #f26a2d, #f3702b);
+}
+
+.rounder-g-top {
+	background-color: var(--lightorange);
+	top: 20px;
+	right: 27px;
+	transform: rotate(34deg);
+	box-shadow: 20px 0 0 0 var(--dark);
+}
+
+@media (min-width: 576px) { 
+	.wrapper {
+		transform: scale(1);
+	}
+ }
+	
+
+
+
+
