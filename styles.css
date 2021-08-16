@@ -117,7 +117,7 @@ body {
 	box-shadow: 20px 0 0 0 var(--dark);
 }
 
-@media (min-width: 576px) { 
+@media (min-width: 430px) { 
 	.wrapper {
 		transform: scale(1);
 	}
